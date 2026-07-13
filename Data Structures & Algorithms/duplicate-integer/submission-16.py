@@ -1,0 +1,13 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        if not nums or len(nums) == 1:
+            return False
+        
+        
+        numset = set()
+        for num in nums:
+            if num in numset:
+                return True
+            else:
+                numset.add(num)
+        return False
